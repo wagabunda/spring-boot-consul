@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: spring-boot-consul
+  cloud:
+    consul:
+      config:
+        prefix: dev
+        enabled: true
+        default-context: defaults
+        format: key_value
+        fail-fast: false
+        watch:
+          enabled: false
+      host: localhost
+      port: 8500
+      scheme: http
+      enabled: true
+    config:
+      allow-override: true
+      override-none: true

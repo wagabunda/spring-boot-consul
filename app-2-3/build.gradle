@@ -1,0 +1,24 @@
+plugins {
+    id 'org.springframework.boot' version "${SPRING_BOOT_VERSION}"
+    id 'java'
+    id "io.freefair.lombok" version "5.3.0"
+}
+
+group = 'local.vagabond'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+repositories {
+    mavenCentral()
+    maven { url 'https://repo.spring.io/milestone' }
+}
+
+dependencies {
+    implementation platform("org.springframework.boot:spring-boot-starter-parent:${SPRING_BOOT_VERSION}")
+    implementation platform("org.springframework.cloud:spring-cloud-dependencies:${SPRING_CLOUD_VERSION}")
+    implementation "org.springframework.cloud:spring-cloud-starter-consul-config"
+}
+
+test {
+    useJUnitPlatform()
+}

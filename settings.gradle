@@ -1,0 +1,4 @@
+rootProject.name = 'spring-boot-consul'
+include 'app-2-3'
+include 'app-2-4'
+
